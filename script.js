@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hacer una solicitud a la API para obtener los ejercicios
     async function getOptionsMuscleGroup(selectedMuscleGroup) {
         try {
-            const response = await fetch(`http://localhost:5000/api/exercises?muscleGroup=${selectedMuscleGroup}`);
+            const response = await fetch(`https://fitwebserver.onrender.com/api/exercises?muscleGroup=${selectedMuscleGroup}`);
             const exercises = await response.json();
 
             // Limpiar el campo de ejercicio
@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //Guardar en la bdmongo
         try {
-            const response = await fetch("http://localhost:5000/ejercicios", {
+            const response = await fetch("https://fitwebserver.onrender.com/ejercicios", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -424,7 +424,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para obtener los ejercicios desde la API
     async function obtenerEjercicios() {
         try {
-            const response = await fetch("http://localhost:5000/ejercicios", {
+            const response = await fetch("https://fitwebserver.onrender.com/ejercicios", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -449,7 +449,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Eliminar todos los registros de bd
     async function deleteEjercicios() {
         try {
-            const response = await fetch("http://localhost:5000/ejercicios", {
+            const response = await fetch("https://fitwebserver.onrender.com/ejercicios", {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (confirm("¿Estás seguro de que deseas eliminar este registro?")) {
             try {
                 // Eliminar de la base de datos
-                const response = await fetch(`http://localhost:5000/ejercicios`, {
+                const response = await fetch(`https://fitwebserver.onrender.com/ejercicios`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
@@ -551,7 +551,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Enviar los datos actualizados al servidor
             try {
-                const response = await fetch(`http://localhost:5000/ejercicios`, {
+                const response = await fetch(`https://fitwebserver.onrender.com/ejercicios`, {
                     method: "PUT", // Usar PUT para actualizar
                     headers: {
                         "Content-Type": "application/json",

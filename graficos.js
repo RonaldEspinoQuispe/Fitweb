@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para obtener los ejercicios desde la API
     async function obtenerEjercicios() {
         try {
-            const response = await fetch("http://localhost:5000/ejercicios", {
+            const response = await fetch("https://fitwebserver.onrender.com/ejercicios", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -449,7 +449,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hacer una solicitud a la API para obtener los ejercicios
         try {
-            const response = await fetch(`http://localhost:5000/api/exercises?muscleGroup=${selectedMuscleGroup}`);
+            const response = await fetch(`https://fitwebserver.onrender.com/api/exercises?muscleGroup=${selectedMuscleGroup}`);
             const exercises = await response.json();
 
             // Limpiar el campo de ejercicio
